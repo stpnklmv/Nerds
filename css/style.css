@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+:root {
+  --color-background: #eeeeee;
+  --color-text: #283136;
+  --color-title: #000000;
+  --color-accent1: #fb565a;
+  --color-accent2: #00ca74;
+  --color-accent3: #a6a6a6;
+  --color-accent4: #4d4d4d;
+}
+
+body {
+  min-width: 1180px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-text);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(0 0 0 0);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: var(--color-background);
+}
+
+.nav {
+  line-height: 30px;
+  color: var(--color-title);
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: var(--color-title);
+}
+
+.nav a[href]:hover,
+.nav a[href]:focus {
+  color: var(--color-accent1);
+}
+
+.nav a[href]:active,
+.nav a[href]:active {
+  color: var(--color-title);
+  opacity: 0.3;
+}
+
+.advantages {
+  background-color: var(--color-background);
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__item-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.advantages__item-button {
+  line-height: 18px;
+  color: #ffffff;
+  background-color: var(--color-accent1);
+  text-transform: uppercase;
+  padding: 17px 54px 15px 54px;
+}
