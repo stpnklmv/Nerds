@@ -1,16 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
 :root {
   --color-background: #eeeeee;
   --color-text: #283136;
   --color-title: #000000;
   --color-accent1: #fb565a;
+  --color-accent1-hover: #e74246;
+  --color-accent1-active: #d7373b;
   --color-accent2: #00ca74;
+  --color-accent2-hover: #00bc6c;
+  --color-accent2-active: #00aa62;
   --color-accent3: #efc849;
+  --color-accent3-hover: #eab534;
+  --color-accent3-active: #e5a722;
   --color-accent4: #a6a6a6;
   --color-accent5: #4d4d4d;
   --color-accent6: #666666;
   --color-accent7: #444444;
+  --color-accent8: #d7dcde;
+  --color-accent9: #b4b9bb;
 }
 
 body {
@@ -51,6 +57,23 @@ img {
   overflow: hidden;
 }
 
+.button {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.button:active {
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+}
+
 .header {
   background-color: var(--color-background);
 }
@@ -75,7 +98,6 @@ img {
   color: var(--color-accent1);
 }
 
-.nav a[href]:active,
 .nav a[href]:active {
   color: var(--color-title);
   opacity: 0.3;
@@ -99,11 +121,19 @@ img {
 }
 
 .advantages__item-button {
-  line-height: 18px;
   color: #ffffff;
   background-color: var(--color-accent1);
-  text-transform: uppercase;
   padding: 15px 54px;
+}
+
+.advantages__item-button:hover,
+.advantages__item-button:focus {
+  background-color: var(--color-accent1-hover);
+}
+
+.advantages__item-button:active {
+  background-color: var(--color-accent1-active);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .offers__list {
@@ -121,21 +151,51 @@ img {
 }
 
 .offers__item-button {
-  line-height: 18px;
   color: #ffffff;
-  text-transform: uppercase;
   padding: 15px 40px;
+}
+
+.offers__item-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .offers__item-button_red {
   background-color: var(--color-accent1);
 }
 
+.offers__item-button_red:hover,
+.offers__item-button_red:focus {
+  background-color: var(--color-accent1-hover);
+}
+
+.offers__item-button_red:active {
+  background-color: var(--color-accent1-active);
+}
+
 .offers__item-button_green {
   background-color: var(--color-accent2);
 }
+
+.offers__item-button_green:hover,
+.offers__item-button_green:focus {
+  background-color: var(--color-accent2-hover);
+}
+
+.offers__item-button_green:active {
+  background-color: var(--color-accent2-active);
+}
+
 .offers__item-button_yellow {
   background-color: var(--color-accent3);
+}
+
+.offers__item-button_yellow:hover,
+.offers__item-button_yellow:focus {
+  background-color: var(--color-accent3-hover);
+}
+
+.offers__item-button_yellow:active {
+  background-color: var(--color-accent3-active);
 }
 
 .about__slogan {
@@ -200,11 +260,17 @@ img {
 
 .contacts__button {
   padding: 17px 44px;
-  color: var(--color-background);
-  text-transform: uppercase;
+  color: #ffffff;
   background-color: var(--color-accent1);
-  border: 0;
-  cursor: pointer;
+}
+
+.contacts__button:hover,
+.contacts__button:focus {
+  background-color: var(--color-accent1-hover);
+}
+
+.contacts__button:active {
+  background-color: var(--color-accent1-active);
 }
 
 .social__list {
@@ -223,4 +289,59 @@ img {
 .social__description {
   line-height: 22px;
   color: var(--color-accent7);
+}
+
+.write-to-us {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.write-to-us__title {
+  font-size: 45px;
+  color: var(--color-title);
+  font-weight: 700;
+}
+
+.write-to-us__lable-title {
+  line-height: 18px;
+  color: var(--color-title);
+  font-weight: 700;
+}
+
+.write-to-us__placeholder {
+  font: inherit;
+  padding: 16px;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 0.5);
+  border: 2px solid var(--color-accent8);
+  border-radius: 3px;
+}
+
+.write-to-us__placeholder:hover {
+  border-color: var(--color-accent9);
+}
+
+.write-to-us__placeholder:focus {
+  outline: none;
+  border-color: #000000;
+  color: var(--color-accent7);
+}
+
+.write-to-us__placeholder:invalid {
+  border-color: var(--color-accent1-hover);
+  color: var(--color-accent1-hover);
+}
+
+.write-to-us__button {
+  padding: 17px 83px;
+  color: #ffffff;
+  background-color: var(--color-accent1);
+}
+
+.write-to-us__button:hover,
+.write-to-us__button:focus {
+  background-color: var(--color-accent1-hover);
+}
+
+.write-to-us__button:active {
+  background-color: var(--color-accent1-active);
 }
