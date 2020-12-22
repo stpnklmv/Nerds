@@ -19,6 +19,12 @@
   --color-accent9: #b4b9bb;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   min-width: 1180px;
   margin: 0;
@@ -68,6 +74,7 @@ img {
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 3px;
+  display: block;
 }
 
 .button:active {
@@ -124,6 +131,7 @@ img {
   color: #ffffff;
   background-color: var(--color-accent1);
   padding: 15px 54px;
+  max-width: 240px;
 }
 
 .advantages__item-button:hover,
@@ -153,6 +161,7 @@ img {
 .offers__item-button {
   color: #ffffff;
   padding: 15px 40px;
+  max-width: 160px;
 }
 
 .offers__item-button:active {
@@ -262,6 +271,7 @@ img {
   padding: 17px 44px;
   color: #ffffff;
   background-color: var(--color-accent1);
+  max-width: 219px;
 }
 
 .contacts__button:hover,
@@ -314,6 +324,7 @@ img {
   color: rgba(68, 68, 68, 0.5);
   border: 2px solid var(--color-accent8);
   border-radius: 3px;
+  display: block;
 }
 
 .write-to-us__placeholder:hover {
@@ -335,6 +346,7 @@ img {
   padding: 17px 83px;
   color: #ffffff;
   background-color: var(--color-accent1);
+  max-width: 259px;
 }
 
 .write-to-us__button:hover,
