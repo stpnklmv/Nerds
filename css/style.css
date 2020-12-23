@@ -42,14 +42,18 @@ img {
   height: auto;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute !important;
-  clip: rect(0 0 0 0);
-  padding: 0 !important;
-  border: 0 !important;
   height: 1px !important;
   width: 1px !important;
   margin: -1px;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
@@ -81,25 +85,21 @@ img {
 }
 
 .nav {
-  line-height: 30px;
-  color: var(--color-title);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.nav__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  min-width: 438px;
 }
 
 .nav a {
+  display: block;
+  line-height: 30px;
   color: var(--color-title);
+  padding-top: 26px;
+  padding-bottom: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .nav a[href]:hover,
@@ -110,6 +110,22 @@ img {
 .nav a[href]:active {
   color: var(--color-title);
   opacity: 0.3;
+}
+
+.nav__basket {
+  padding-left: 40px;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 810px;
+}
+
+.nav__list a {
+  margin: 0 22px;
 }
 
 .advantages {
