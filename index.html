@@ -224,27 +224,40 @@
       </div>
     </section>
   </footer>
-  <section class="write-to-us" style="display: none;">
-    <h2 class="write-to-us__title">Напишите нам</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <div>
-        <label for="form-about-name" class="write-to-us__lable-title">Ваше имя</label>
-        <input id="form-about-name" type="text" name="name" placeholder="Имя Фамилия" class="write-to-us__placeholder">
-      </div>
-      <div>
-        <label for="form-about-email" class="write-to-us__lable-title">Ваш email:</label>
-        <input id="form-about-email" type="email" name="email" placeholder="email@example.com"
-          class="write-to-us__placeholder">
-      </div>
-      <div>
-        <label for="form-about-text" class="write-to-us__lable-title">Текст письма:</label>
-        <textarea id="form-about-text" type="text" name="text" placeholder="В свободной форме"
-          class="write-to-us__placeholder"></textarea>
-      </div>
-      <button type="submit" class="write-to-us__button button">Отправить</button>
-    </form>
-    <button type="button">Закрыть</button>
-  </section>
+  <div class="overlay hide">
+    <div class="modal">
+      <section class="write-to-us">
+        <h2 class=" write-to-us__title">Напишите нам</h2>
+        <form class="write-to-us__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="write-to-us__form-top">
+            <div>
+              <label for="form-about-name" class="write-to-us__lable-title">Ваше имя:</label>
+              <input id="form-about-name" type="text" name="name" placeholder="Имя Фамилия"
+                class="write-to-us__placeholder">
+            </div>
+            <div>
+              <label for="form-about-email" class="write-to-us__lable-title">Ваш email:</label>
+              <input id="form-about-email" type="email" name="email" placeholder="email@example.com"
+                class="write-to-us__placeholder">
+            </div>
+          </div>
+          <div>
+            <label for="form-about-text" class="write-to-us__lable-title">Текст письма:</label>
+            <textarea id="form-about-text" type="text" name="text" placeholder="В свободной форме"
+              class="write-to-us__placeholder"></textarea>
+          </div>
+          <button type="submit" class="write-to-us__button button">Отправить</button>
+        </form>
+        <button class="modal-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+          <svg viewBox="0 0 21 21">
+            <path fill="#FB565A"
+              d="M13 11l8-8a1 1 0 000-1l-2-2a1 1 0 00-1 0l-7 8-8-8a1 1 0 00-1 0L0 2a1 1 0 000 1l8 8-8 7a1 1 0 000 1l2 2a1 1 0 001 0l8-8 7 8a1 1 0 001 0l2-2a1 1 0 000-1l-8-7z" />
+          </svg>
+        </button>
+      </section>
+    </div>
+  </div>
 </body>
 
 </html>

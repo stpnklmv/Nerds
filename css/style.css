@@ -42,6 +42,10 @@ img {
   height: auto;
 }
 
+.hide {
+  display: none;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(0 0 0 0);
@@ -129,11 +133,14 @@ img {
 
 .nav__basket {
   position: relative;
-  padding-left: 40px;
   border-bottom: 2px solid transparent;
 }
 
-.nav__basket::before {
+.nav__basket a {
+  padding-left: 40px;
+}
+
+.nav__basket a::before {
   content: url(../img/cart-icon.svg);
   position: absolute;
   width: 15px;
@@ -523,14 +530,53 @@ img {
   color: var(--color-accent7);
 }
 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
 .write-to-us {
+  position: relative;
+  background-color: #fff;
+  max-width: 960px;
+  padding: 100px;
+  padding-top: 63px;
+  padding-bottom: 80px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.write-to-us__form-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.write-to-us__form-top div {
+  margin-bottom: 34px;
+}
+
+.write-to-us__form-top div:first-child {
+  margin-right: 40px;
 }
 
 .write-to-us__title {
   font-size: 45px;
   color: var(--color-title);
   font-weight: 700;
+  margin-bottom: 38px;
 }
 
 .write-to-us__lable-title {
@@ -547,6 +593,12 @@ img {
   border: 2px solid var(--color-accent8);
   border-radius: 3px;
   display: block;
+  min-width: 360px;
+}
+
+textarea.write-to-us__placeholder {
+  width: 100%;
+  min-height: 118px;
 }
 
 .write-to-us__placeholder:hover {
@@ -570,6 +622,7 @@ img {
   color: #ffffff;
   background-color: var(--color-accent1);
   max-width: 259px;
+  margin-top: 47px;
 }
 
 .write-to-us__button:hover,
@@ -580,4 +633,27 @@ img {
 
 .write-to-us__button:active {
   background-color: var(--color-accent1-active);
+}
+
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  opacity: 0.3;
+  tabindex: 0;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.3;
 }
