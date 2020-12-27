@@ -4,34 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Магазин</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Дизайн-студия Nerds</title>
 </head>
 
 <body>
-
-  <header>
-    <nav>
+  <header class="header">
+    <nav class="nav wrapper">
       <a href="index.html">
         <img src="img/nerds-logo.svg" alt="Nerds" width="160" height="65">
       </a>
-      <ul>
-        <li><a href="index.html">Студия</a></li>
-        <li><a href="blank.html">Клиенты</a></li>
-        <li><a>Магазин</a></li>
-        <li><a href="blank.html">Контакты</a></li>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="blank.html">Студия</a></li>
+        <li class="nav__item"><a href="blank.html">Клиенты</a></li>
+        <li class="nav__item"><a class="nav__active">Магазин</a></li>
+        <li class="nav__item"><a href="blank.html">Контакты</a></li>
       </ul>
-      <a href="blank.html">Корзина</a>
+      <div class="nav__basket">
+        <a href="blank.html">Корзина</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1>Магазин готовых шаблонов</h1>
-    <section>
-      <h2>Каталог</h2>
-      <div>
+  <main class="main-content">
+    <div class="main-content__title">
+      <h1 class="wrapper">Магазин готовых шаблонов</h1>
+    </div>
+    <section class="catalog wrapper">
+      <h2 class="visually-hidden">Каталог</h2>
+      <div class="catalog__filter">
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
-            <legend>Стоимость:</legend>
+            <legend class="catalog__filter-title">Стоимость:</legend>
             <ul>
               <li>
                 <label for="form-sort-from">от</label>
@@ -88,131 +94,214 @@
           <button type="button">Показать</button>
         </form>
       </div>
-      <div>
-        <form>
-          <fieldset>
-            <legend>Сортировать:</legend>
-            <ul>
-              <li><button type="button">По цене</button></li>
-              <li><button type="button">По типу</button></li>
-              <li><button type="button">По названию</button></li>
-              <li><button type="button">Вниз</button></li>
-              <li><button type="button">Вверх</button></li>
-            </ul>
-          </fieldset>
-        </form>
+      <div class="catalog__sort">
+        <div class="catalog__sort-title">
+          <form>
+            <fieldset>
+              <div>
+                <legend>Сортировать:</legend>
+              </div>
+              <div>
+                <ul class="catalog__sort-list sort-list">
+                  <li>
+                    <button class="sort-list__button sort-list__button-active" type="button">По цене</button>
+                  </li>
+                  <li>
+                    <button class="sort-list__button" type="button">По типу</button>
+                  </li>
+                  <li>
+                    <button class="sort-list__button" type="button">По названию</button>
+                  </li>
+                  <li>
+                    <button class="sort-list__button sort-list__button-active" type="button"><span
+                        class="visually-hidden">Вниз</span></button>
+                  </li>
+                  <li>
+                    <button class="sort-list__button" type="button"><span class="visually-hidden">Вверх</span></button>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="catalog__content">
+          <article class="catalog__content-item">
+            <div class="catalog__content-item-img">
+              <img src="img/item-sedona.jpg" alt="Sedona" width="360" height="576">
+            </div>
+            <div class="catalog__content-item-description">
+              <h3>Sedona</h3>
+              <p>Информационный сайт<br>
+                для туристов
+              </p>
+              <button class="button" type="button">9 900 ₽</button>
+            </div>
+          </article>
+          <article class="catalog__content-item">
+            <div class="catalog__content-item-img">
+              <img src="img/item-pink.jpg" alt="Pink App" width="358" height="576">
+            </div>
+            <div class="catalog__content-item-description">
+              <h3>Pink App</h3>
+              <p>Продуктовый лендинг<br>
+                приложения для iOS и Android
+              </p>
+              <button class="button" type="button">9 900 ₽</button>
+            </div>
+          </article>
+          <article class="catalog__content-item">
+            <div class="catalog__content-item-img">
+              <img src="img/item-borodinski.jpg" alt="Borodinski" width="358" height="576">
+            </div>
+            <div class="catalog__content-item-description">
+              <h3>Barbershop</h3>
+              <p>Сайт салона красоты.<br>
+                Для мужчин, да.
+              </p>
+              <button class="button" type="button">9 900 ₽</button>
+            </div>
+          </article>
+          <article class="catalog__content-item">
+            <div class="catalog__content-item-img">
+              <img src="img/item-mishka.jpg" alt="Mishka" width="358" height="576">
+            </div>
+            <div class="catalog__content-item-description">
+              <h3>Mishka</h3>
+              <p>Интернет-магазин<br>
+                вязаных игрушек
+              </p>
+              <button class="button" type="button">9 900 ₽</button>
+            </div>
+          </article>
+          <article class="catalog__content-item">
+            <div class="catalog__content-item-img">
+              <img src="img/item-aplus.jpg" alt="A Plus" width="358" height="576">
+            </div>
+            <div class="catalog__content-item-description">
+              <h3>A Plus</h3>
+              <p>Лендинг курсов повышения<br>
+                квалификации
+              </p>
+              <button class="button" type="button">9 900 ₽</button>
+            </div>
+          </article>
+          <article class="catalog__content-item">
+            <div class="catalog__content-item-img">
+              <img src="img/item-kvast.jpg" alt="Кваст" width="358" height="576">
+            </div>
+            <div class="catalog__content-item-description">
+              <h3>Кваст</h3>
+              <p>Промо-сайт производителя<br>
+                крафтового кваса
+              </p>
+              <button class="button" type="button">9 900 ₽</button>
+            </div>
+          </article>
+        </div>
+        <ul>
+          <li><button type="button">1</button></li>
+          <li><button type="button">2</button></li>
+          <li><button type="button">3</button></li>
+          <li><button type="button">Следующая</button></li>
+        </ul>
       </div>
-      <div>
-        <article>
-          <img src="img/item-sedona.jpg" alt="Sedona" width="360" height="576">
-          <h3>Sedona</h3>
-          <p>Информационный сайт<br>
-            для туристов
-          </p>
-          <button type="button">9 900 ₽</button>
-        </article>
-        <article>
-          <img src="img/item-pink.jpg" alt="Pink App" width="358" height="576">
-          <h3>Pink App</h3>
-          <p>Продуктовый лендинг<br>
-            приложения для iOS и Android
-          </p>
-          <button type="button">9 900 ₽</button>
-        </article>
-        <article>
-          <img src="img/item-borodinski.jpg" alt="Borodinski" width="358" height="576">
-          <h3>Barbershop</h3>
-          <p>Сайт салона красоты.<br>
-            Для мужчин, да.
-          </p>
-          <button type="button">9 900 ₽</button>
-        </article>
-        <article>
-          <img src="img/item-mishka.jpg" alt="Mishka" width="358" height="576">
-          <h3>Mishka</h3>
-          <p>Интернет-магазин<br>
-            вязаных игрушек
-          </p>
-          <button type="button">9 900 ₽</button>
-        </article>
-        <article>
-          <img src="img/item-aplus.jpg" alt="A Plus" width="358" height="576">
-          <h3>A Plus</h3>
-          <p>Лендинг курсов повышения<br>
-            квалификации
-          </p>
-          <button type="button">9 900 ₽</button>
-        </article>
-        <article>
-          <img src="img/item-kvast.jpg" alt="Кваст" width="358" height="576">
-          <h3>Кваст</h3>
-          <p>Промо-сайт производителя<br>
-            крафтового кваса
-          </p>
-          <button type="button">9 900 ₽</button>
-        </article>
-      </div>
-      <ul>
-        <li><button type="button">1</button></li>
-        <li><button type="button">2</button></li>
-        <li><button type="button">3</button></li>
-        <li><button type="button">Следующая</button></li>
-      </ul>
     </section>
   </main>
+  <footer class="footer">
+    <section class="contacts">
+      <div class="wrapper">
+        <div class="contacts__info">
+          <h2 class="visually-hidden">Контакты</h2>
+          <h3 class="contacts__title">NЁRDS DESIGN STUDIO</h3>
+          <p class="contacts__description">191186, Санкт-Петербург,<br>
+            ул. Б. Конюшенная, д. 19/8<br><br>
+            тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+          </p>
+          <button type="button" class="button contacts__button">Напишите нам</button>
+        </div>
 
-  <footer>
-    <section>
-      <div>
-        <h2>Контакты</h2>
-        <h3>NЁRDS DESIGN STUDIO</h3>
-        <p>191186, Санкт-Петербург,<br>
-          ул. Б. Конюшенная, д. 19/8<br><br>
-          тел. +7 (812) 275-75-75
-        </p>
-        <button type="button">Напишите нам</button>
+        <img class="contacts__marker" src="img/map-marker 1.png" alt="Метка на карте" width="231" height="190">
       </div>
-      <div>
-        <img src="img/map-marker 1.png" alt="Метка на карте" width="231" height="190">
-      </div>
-      <div>
+      <div class="contacts__map">
         <img src="img/map 1.jpg" alt="Карта" width="1440" height="416">
       </div>
     </section>
-    <section>
-      <h2>Социальные сети</h2>
-      <ul>
-        <li><a href="blank.html">В контакте</a></li>
-        <li><a href="blank.html">Facebook</a></li>
-        <li><a href="blank.html">Instagram</a></li>
+    <section class="social wrapper">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <ul class="social__list">
+        <li>
+          <a href="blank.html">
+            <span class="visually-hidden">В контакте</span>
+            <svg width="81" height="81">
+              <path class="social__item-content" d=" M43.1 44.5c1-.3 2.2 2 3.5 3 1 .6 1.7.5 1.7.5h3.5s1.8-.2 1-1.6c0-.1-.5-1-2.6-3-2.2-2-1.9-1.8.7-5.3
+                  1.6-2.1 2.3-3.5 2-4-.1-.6-1.3-.4-1.3-.4h-4c-.3 0-.6.1-.8.5 0 0-.6 1.7-1.4 3.1-1.7 3-2.4 3.2-2.7
+                  3-.7-.5-.5-1.8-.5-2.7 0-2.9.4-4.1-.9-4.4-.4-.1-.7-.2-1.8-.2-1.4 0-2.6 0-3.2.3-.5.3-.8.7-.6.8.2 0 .8.1
+                  1.1.6.4.5.4 1.7.4 1.7s.3 3.5-.5 3.9c-.5.3-1.3-.3-2.8-3-.8-1.4-1.4-3-1.4-3l-.3-.4-.6-.2h-3.8s-.5
+                  0-.7.2c-.2.3 0 .7 0 .7S30 41.5 33.3 45c3 3.1 6.4 3 6.4 3h1.6s.4-.1.7-.4c.2-.2.2-.7.2-.7s0-2 1-2.4z"
+                fill="#fff" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="blank.html">
+            <span class="visually-hidden">Facebook</span>
+            <svg width="81" height="81">
+              <path class="social__item-content" d="M47 35v-4h-4a4 4 0 00-4 4v4h-4v4h4v10h4V43h4v-4h-4v-4h4z"
+                fill="#fff" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="blank.html">
+            <span class="visually-hidden">Instagram</span>
+            <svg width="81" height="81">
+              <path class="social__item-content" fill-rule="evenodd"
+                d="M33 30h15a3 3 0 013 3v15a3 3 0 01-3 3H33a3 3 0 01-3-3V33a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM33 48v-9h1.2a6.5 6.5 0 1012.6 0H48v9H33zm11-11h4v-4h-4v4z"
+                fill="#fff" />
+            </svg>
+          </a>
+        </li>
       </ul>
-      <div>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+      <div class="social__right">
+        <p class="social__title">Давайте дружить, это выгодно!</p>
+        <p class="social__description">Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </section>
   </footer>
-
-  <section>
-    <h2>Напишите нам</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <div>
-        <label for="form-about-name">Ваше имя</label>
-        <input id="form-about-name" type="text" name="name" placeholder="Имя Фамилия">
-      </div>
-      <div>
-        <label for="form-about-email">Ваш email:</label>
-        <input id="form-about-email" type="email" name="email" placeholder="email@example.com ">
-      </div>
-      <div>
-        <label for="form-about-text">Текст письма:</label>
-        <textarea id="form-about-text" type="text" name="text" placeholder="В свободной форме"></textarea>
-      </div>
-      <button type="submit">Отправить</button>
-    </form>
-    <button type="button">Закрыть</button>
-  </section>
-
+  <div class="overlay hide">
+    <div class="modal">
+      <section class="write-to-us">
+        <h2 class=" write-to-us__title">Напишите нам</h2>
+        <form class="write-to-us__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="write-to-us__form-top">
+            <div>
+              <label for="form-about-name" class="write-to-us__lable-title">Ваше имя:</label>
+              <input id="form-about-name" type="text" name="name" placeholder="Имя Фамилия"
+                class="write-to-us__placeholder">
+            </div>
+            <div>
+              <label for="form-about-email" class="write-to-us__lable-title">Ваш email:</label>
+              <input id="form-about-email" type="email" name="email" placeholder="email@example.com"
+                class="write-to-us__placeholder">
+            </div>
+          </div>
+          <div>
+            <label for="form-about-text" class="write-to-us__lable-title">Текст письма:</label>
+            <textarea id="form-about-text" type="text" name="text" placeholder="В свободной форме"
+              class="write-to-us__placeholder"></textarea>
+          </div>
+          <button type="submit" class="write-to-us__button button">Отправить</button>
+        </form>
+        <button class="modal-close" type="button" tabindex="0">
+          <span class="visually-hidden">Закрыть</span>
+          <svg viewBox="0 0 21 21">
+            <path fill="#FB565A"
+              d="M13 11l8-8a1 1 0 000-1l-2-2a1 1 0 00-1 0l-7 8-8-8a1 1 0 00-1 0L0 2a1 1 0 000 1l8 8-8 7a1 1 0 000 1l2 2a1 1 0 001 0l8-8 7 8a1 1 0 001 0l2-2a1 1 0 000-1l-8-7z" />
+          </svg>
+        </button>
+      </section>
+    </div>
+  </div>
 </body>
 
 </html>

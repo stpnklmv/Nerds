@@ -17,7 +17,7 @@
         <img src="img/nerds-logo.svg" alt="Nerds" width="160" height="65">
       </a>
       <ul class="nav__list">
-        <li class="nav__item"><a class="nav__active">Студия</a></li>
+        <li class="nav__item"><a href="blank.html">Студия</a></li>
         <li class="nav__item"><a href="blank.html">Клиенты</a></li>
         <li class="nav__item"><a href="catalog.html">Магазин</a></li>
         <li class="nav__item"><a href="blank.html">Контакты</a></li>
@@ -27,7 +27,7 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main class="main-content">
     <h1 class="visually-hidden">Дизайн-студия Nerds</h1>
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
@@ -47,7 +47,7 @@
               height="431">
           </div>
         </li>
-        <li class="advantages__item" style="display:none">
+        <li class="advantages__item hide">
           <div>
             <p class="advantages__item-title">Любим математику<br>
               как никто другой
@@ -62,7 +62,7 @@
               height="431">
           </div>
         </li>
-        <li class="advantages__item" style="display:none">
+        <li class="advantages__item hide">
           <div>
             <p class="advantages__item-title">Только ночь,<br>
               только хардкор
@@ -77,6 +77,15 @@
               height="431">
           </div>
         </li>
+      </ul>
+      <ul class="advantages__slider-control slider-control">
+        <li class=" slider-control__item slider-control__item-active"><button type="button"><span
+              class="visually-hidden">Первый
+              слайд</span></button></li>
+        <li class="slider-control__item"><button type="button"><span class="visually-hidden">Второй
+              слайд</span></button></li>
+        <li class="slider-control__item"><button type="button"><span class="visually-hidden">Третий
+              слайд</span></button></li>
       </ul>
     </section>
     <section class="offers wrapper">
@@ -163,7 +172,7 @@
       </ul>
     </section>
   </main>
-  <footer>
+  <footer class="footer">
     <section class="contacts">
       <div class="wrapper">
         <div class="contacts__info">
@@ -248,7 +257,7 @@
           </div>
           <button type="submit" class="write-to-us__button button">Отправить</button>
         </form>
-        <button class="modal-close" type="button">
+        <button class="modal-close" type="button" tabindex="0">
           <span class="visually-hidden">Закрыть</span>
           <svg viewBox="0 0 21 21">
             <path fill="#FB565A"
