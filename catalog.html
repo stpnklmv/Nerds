@@ -42,8 +42,8 @@
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar" style="width: 34%; margin-left: 20%"></div>
-                  <div class="toggle toggle-min" tabindex="0" style="left: 24%"></div>
-                  <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+                  <div class="toggle toggle-min" style="left: 24%"></div>
+                  <div class="toggle toggle-max" style="left: 50%"></div>
                 </div>
               </div>
               <div class="price-controls">
@@ -56,49 +56,57 @@
               </div>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-item">
             <legend>Сетка:</legend>
             <ul>
               <li>
-                <input type="radio" id="form-sort-adaptive" name="grid" value="adaptive" checked>
+                <input class="filter-item__radio visually-hidden" type="radio" id="form-sort-adaptive" name="grid"
+                  value="adaptive" checked>
                 <label for="form-sort-adaptive">Адаптивная</label>
               </li>
               <li>
-                <input type="radio" id="form-sort-fixed" name="grid" value="fixed">
+                <input class="filter-item__radio visually-hidden" type="radio" id="form-sort-fixed" name="grid"
+                  value="fixed">
                 <label for="form-sort-fixed">Фиксированная</label>
               </li>
               <li>
-                <input type="radio" id="form-sort-rubber" name="grid" value="rubber">
+                <input class="filter-item__radio visually-hidden" type="radio" id="form-sort-rubber" name="grid"
+                  value="rubber">
                 <label for="form-sort-rubber">Резиновая</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-item">
             <legend>Особенности:</legend>
             <ul>
               <li>
-                <input type="checkbox" id="form-sort-slider" name="slider" checked>
+                <input class="filter-item__checkbox visually-hidden" type="checkbox" id="form-sort-slider" name="slider"
+                  checked>
                 <label for="form-sort-slider">Слайдер</label>
               </li>
               <li>
-                <input type="checkbox" id="form-sort-blockofadvantages" name="blockofadvantages">
-                <label for="form-sort-blockofadvantages">Блок премуществ</label>
+                <input class="filter-item__checkbox visually-hidden" type="checkbox" id="form-sort-blockofadvantages"
+                  name="blockofadvantages">
+                <label for="form-sort-blockofadvantages">Блок преимуществ</label>
               </li>
               <li>
-                <input type="checkbox" id="form-sort-news" name="news" checked>
+                <input class="filter-item__checkbox visually-hidden" type="checkbox" id="form-sort-news" name="news"
+                  checked>
                 <label for="form-sort-news">Новости</label>
               </li>
               <li>
-                <input type="checkbox" id="form-sort-gallery" name="gallery">
-                <label for="form-sort-gallery">Галлерея</label>
+                <input class="filter-item__checkbox visually-hidden" type="checkbox" id="form-sort-gallery"
+                  name="gallery">
+                <label for="form-sort-gallery">Галерея</label>
               </li>
               <li>
-                <input type="checkbox" id="form-sort-basket" name="basket">
+                <input class="filter-item__checkbox visually-hidden" type="checkbox" id="form-sort-basket"
+                  name="basket">
                 <label for="form-sort-basket">Корзина</label>
               </li>
             </ul>
           </fieldset>
-          <button type="button">Показать</button>
+          <button class="filter-item__button button" type="button">Показать</button>
         </form>
       </div>
       <div class="catalog__sort">
