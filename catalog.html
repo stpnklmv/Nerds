@@ -36,18 +36,25 @@
       <h2 class="visually-hidden">Каталог</h2>
       <div class="catalog__filter">
         <form action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
+          <fieldset class="filter-item">
             <legend class="catalog__filter-title">Стоимость:</legend>
-            <ul>
-              <li>
-                <label for="form-sort-from">от</label>
-                <input id="form-sort-from" type="text" name="from" placeholder="0">
-              </li>
-              <li>
-                <label for="form-sort-to">до</label>
-                <input id="form-sort-to" type="text" name="to" placeholder="15000">
-              </li>
-            </ul>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 34%; margin-left: 20%"></div>
+                  <div class="toggle toggle-min" tabindex="0" style="left: 24%"></div>
+                  <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+                </div>
+              </div>
+              <div class="price-controls">
+                <label for="form-sort-from">
+                  от <input id="form-sort-from" type="number" name="main-price" value="0" step="100">
+                </label>
+                <label for="form-sort-to">
+                  до <input id="form-sort-to" type="number" name="max-price" value="15000" step="100">
+                </label>
+              </div>
+            </div>
           </fieldset>
           <fieldset>
             <legend>Сетка:</legend>
