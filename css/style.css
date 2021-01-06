@@ -872,6 +872,7 @@ h1 {
   padding: 50px;
   padding-bottom: 46px;
   margin-top: 54px;
+  z-index: 2;
 }
 
 .contacts__title {
@@ -917,12 +918,13 @@ h1 {
 }
 
 .contacts__map {
+  position: relative;
   width: 100%;
   height: 416px;
   overflow: hidden;
 }
 
-.contacts__map img {
+.contacts__map .map-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -930,8 +932,16 @@ h1 {
 
 .contacts__marker {
   position: absolute;
+  width: 231px;
+  height: 190px;
   left: 58%;
   top: 37%;
+  z-index: 0;
+}
+
+.map-google {
+  position: absolute;
+  z-index: 1;
 }
 
 .social {
@@ -997,9 +1007,10 @@ h1 {
   background-color: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
-.modal {
+.modal-container {
   min-height: 100%;
   display: flex;
   align-items: center;
@@ -1072,11 +1083,6 @@ textarea.write-to-us__placeholder {
   color: var(--color-accent7);
 }
 
-.write-to-us__placeholder:invalid {
-  border-color: var(--color-accent1-hover);
-  color: var(--color-accent1-hover);
-}
-
 .write-to-us__button {
   padding: 17px 83px;
   color: #ffffff;
@@ -1115,4 +1121,53 @@ textarea.write-to-us__placeholder {
 
 .modal-close:active {
   opacity: 0.3;
+}
+
+.modal {
+  display: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal-bounce {
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
