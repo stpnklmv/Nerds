@@ -17,7 +17,7 @@ try {
   storageFormEmail = localStorage.getItem("modalFormEmail");
 } catch (err) {
   isStorageSupport = false;
-}
+};
 
 contactsBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -69,4 +69,4 @@ window.addEventListener("keydown", function (evt) {
       modalContainer.classList.remove("modal-bounce");
     }
   }
-})
+});
